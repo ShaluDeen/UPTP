@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sign Up</title>
+  <style>body {
+    background-color: #cb9aff;
+  }
+  
+  .container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  form {
+    margin: 20px 0;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="submit"] {
+    background-color: #337ab7;
+    color: white;
+    border: none;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #337ab7;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sign Up</h1>
+    <form id="signup-form" action="/signup" method="POST">
+      <input type="text" name="name" placeholder="Enter your name">
+      <input type="email" name="email" placeholder="Enter your email">
+      <input type="password" name="password" placeholder="Enter your password">
+      <input type="submit" value="Sign Up">
+    </form>
+  </div>
+
+  <script>
+    document.querySelector("#signup-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Show an alert message
+      alert("Appointment Successful!");
+    });
+  </script>
+</body>
+</html>
+
